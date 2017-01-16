@@ -80,6 +80,7 @@ void loop() {
  *  by a linear regression. Should have been more... The more data you get 
  * the more precise will be the whole system. Put this data on a Google spreadsheet,
  * draw a scatter chart and get the regression equation: Voltage = 3.266e-3* A0 + 0.034 (R2 = 0.95)
+ * This example : https://docs.google.com/spreadsheets/d/1OXbEm3h9tPYfmaF-JNMPKjYKyHc15wS1GgpY4dgYMFM/edit?usp=sharing
 analogRead(A0)  Voltage Signal LM35 (voltmeter)
 60  0.23
 62  0.24
