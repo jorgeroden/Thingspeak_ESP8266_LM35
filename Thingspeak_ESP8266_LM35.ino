@@ -66,9 +66,6 @@ void loop() {
   ArduinoOTA.handle(); 
   int reading = analogRead(A0);
   // Linear regression with "some" measured data (see below):
-  // Voltage in LM35 signal pin and GND vs
-  // value from ADC in A0 (D1 ESP8266 card).
-  // Equation: Voltage = 3.266e-3* A0 + 0.034 (R2 = 0.95)
   float voltage = 3.266e-3 * float(reading) + 0.034; 
   float tempC = voltage * 100.0;
   ThingSpeak.writeField(myChannel, fieldNumber, tempC, myAPIKey);
