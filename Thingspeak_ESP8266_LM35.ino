@@ -1,9 +1,12 @@
 // Plot LM35 data on thingspeak.com using an ESP8266 (Linknode D1)
 // Icludes OTA (Over The Air) in order to update this program 
 // through WIFI (no USB cable needed).
-// Author: Jorge Munoz Rodenas
+// By Jorge Munoz
 // email: jorgeroden1@gmail.com
-// Dec 2016 License under GPL v3
+// Jan 2017 License under GPL v3
+// ESP8266 -> http://linksprite.com/wiki/index.php5?title=LinkNode_D1
+// LM35 -> https://www.osepp.com/electronic-modules/sensor-modules/79-lm35-temperature-sensor-module
+// Connections (Sensor = Board) : LM35 Vcc = 3.3V, GND , S = A0
 
 #include <ESP8266WiFi.h>
 #include <ThingSpeak.h> 
@@ -77,8 +80,9 @@ void loop() {
   delay(50000);  
 }
 /* Data gathered for set up a formula (Temp vs A0) 
- *  by a linear regression. The more data you get 
- * the more precise will be the whole system.
+ *  by a linear regression. Should have been more... The more data you get 
+ * the more precise will be the whole system. Put this data on a Google spreadsheet,
+ * draw a scatter chart and get the regression equation: Voltage = 3.266e-3* A0 + 0.034 (R2 = 0.95)
 analogRead(A0)  Voltage Signal LM35 (voltmeter)
 60  0.23
 62  0.24
