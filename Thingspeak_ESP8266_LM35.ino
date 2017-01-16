@@ -11,11 +11,11 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
  
-const char* myAPIKey = "N6BG9PLJUYQY9RIN";
+const char* myAPIKey = "XXXXX";
 unsigned long myChannel = 207881;
 int fieldNumber = 1;
-const char* ssid = "FiOS-0EUZD";
-const char* password = "rodeo34fog6382plea";
+const char* ssid = "XXXXXX";
+const char* password = "XXXXXXXX";
 const char* server = "api.thingspeak.com";
 
 WiFiClient client;
