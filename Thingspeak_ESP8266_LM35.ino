@@ -77,7 +77,8 @@ void loop() {
   delay(50000);  
 }
 /* Data gathered for set up a formula (Temp vs A0) 
- *  by a linear regression 
+ *  by a linear regression. The more data you get 
+ * the more precise will be the whole system.
 analogRead(A0)  Voltage Signal LM35 (voltmeter)
 60  0.23
 62  0.24
